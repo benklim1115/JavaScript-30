@@ -71,8 +71,12 @@
         audio.play();
         key.classList.add("playing");
 
-        function removeTransition(e) {
 
+        function removeTransition(e) {
+            if (e.propertyName !== "transform") {
+                return;
+            }
+            this.classList.remove("playing");
         }
 
         /* Listen for when click event happens, turn off styling */
