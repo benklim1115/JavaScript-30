@@ -59,6 +59,7 @@
 
 <script>
     window.addEventListener("keydown", function (e) {
+        /* Adding playing class to specific key */
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
         const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
         //no audio element associated with that key then return and stop function
@@ -69,6 +70,12 @@
         audio.currentTime = 0;
         audio.play();
         key.classList.add("playing");
+
+        /* Listen for when click event happens, turn off styling */
+        const keys = document.querySelectorAll(".key");
+        //at transitionend remove playing class
+        keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+
     });
 </script>
 
