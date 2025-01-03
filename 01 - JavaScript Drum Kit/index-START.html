@@ -60,12 +60,12 @@
 <script>
     window.addEventListener("keydown", function (e) {
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-
         //no audio element associated with that key then return and stop function
         if (!audio) {
             return;
         }
-
+        //rewind element to the start so it can play in rapid succession
+        audio.currentTime = 0;
         audio.play();
 
     });
