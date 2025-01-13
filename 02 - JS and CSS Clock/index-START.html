@@ -81,15 +81,18 @@
       const seconds = now.getSeconds();
       //need to turn seconds into degrees
       const secondsDegrees = (seconds / 60) * 360 + 90;
-      secondHands.style.transform = `rotate(${secondsDegrees}deg)`;
+      secondsHand.style.transform = `rotate(${secondsDegrees}deg)`;
+      console.log(`Seconds: ${seconds}`);
 
       const minutes = now.getMinutes();
       const minutesDegrees = (minutes / 60) * 360 + 90;
-      minutesHands.style.transform = `rotate(${minutesDegrees}deg)`;
+      minutesHand.style.transform = `rotate(${minutesDegrees}deg)`;
+      console.log(`Minutes: ${minutes}`);
 
       const hours = now.getHours();
       const hoursDegrees = (hours / 24) * 360 + 90;
-      hoursHands.style.transform = `rotate(${hoursDegrees}deg)`;
+      hoursHand.style.transform = `rotate(${hoursDegrees}deg)`;
+      console.log(`Hours: ${hours}`);
     }
 
     setInterval(setDate, 1000);
