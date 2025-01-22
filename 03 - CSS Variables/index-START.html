@@ -67,7 +67,7 @@
     function handleUpdate() {
       //use data-sizing attribute to help extract values
       const suffix = this.dataset.sizing || "";
-      console.log(suffix);
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
     }
 
     inputs.forEach(input => input.addEventListener("change", handleUpdate));
