@@ -29,7 +29,7 @@ function findMatches(wordToMatch, cities) {
     //need to check if city or state matches what was searched
     //global and case insensitive
     const regex = new RegExp(wordToMatch, "gi");
-    return place.city.match(regex);
+    return place.city.match(regex) || place.state.match(regex);
   });
 }
 
