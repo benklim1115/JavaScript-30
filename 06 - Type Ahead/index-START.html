@@ -27,6 +27,9 @@ fetch(endpoint)
 function findMatches(wordToMatch, cities) {
   return cities.filter(place => {
     //need to check if city or state matches what was searched
+    //global and case insensitive
+    const regex = new RegExp(wordToMatch, "gi");
+    return place.city.match(regex);
   });
 }
 
