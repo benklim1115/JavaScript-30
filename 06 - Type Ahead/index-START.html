@@ -25,7 +25,9 @@ fetch(endpoint)
   .then(data => cities.push(...data)));
 
 function findMatches(wordToMatch, cities) {
-
+  return cities.filter(place => {
+    //need to check if city or state matches what was searched
+  });
 }
 
 </script>
