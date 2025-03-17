@@ -36,7 +36,11 @@
     ctx.stroke();
     [lastX, lastY] = [e.offsetX, e.offsetY];
     ctx.lineWidth = 100;
+
     hue++;
+    if (hue >= 360) {
+      hue = 0;
+    }
   }
 
   canvas.addEventListener("mousedown", (e) => {
