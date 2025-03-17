@@ -27,6 +27,7 @@
     if (!isDrawing) return;
     console.log(e);
     ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+    ctx.lineWidth = hue;
     //start with x and y position and have ending x and y positions
     ctx.beginPath();
     //start from
