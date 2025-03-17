@@ -34,6 +34,7 @@
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
     [lastX, lastY] = [e.offsetX, e.offsetY];
+    ctx.lineWidth = 100;
   }
 
   canvas.addEventListener("mousedown", (e) => {
