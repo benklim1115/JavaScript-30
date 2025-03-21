@@ -102,7 +102,11 @@
   let lastChecked;
 
   function handleCheck(e) {
-    
+    //check to see if they have the shift key pressed down
+    //AND check if they are checking it
+    if (e.shiftKey && this.checked) {
+
+    }
     
     lastChecked = this;
   }
