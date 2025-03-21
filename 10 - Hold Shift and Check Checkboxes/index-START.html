@@ -97,7 +97,11 @@
   </div>
 
 <script>
-  const checkboxes = document.querySelectorAll(".inbox type['checkbox']");
+  const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("click", console.log("checked"));
+  });
 </script>
 </body>
 </html>
