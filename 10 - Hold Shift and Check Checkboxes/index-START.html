@@ -112,6 +112,11 @@
           inBetween = !inBetween;
           console.log("Starting to check inBetween");
         }
+
+        //if we are inBetween check all checkboxes in loop
+        if (inBetween) {
+          checkbox.checked = true;
+        }
       });
     }
     
