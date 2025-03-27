@@ -44,6 +44,7 @@
   </div>
 
   <script>
+    // Run checkslide function at most this many seconds with debounce.
     function debounce(func, wait = 20, immediate = true) {
       var timeout;
       return function() {
@@ -65,7 +66,7 @@
       console.log(e);
     }
 
-    window.addEventListener('scroll', checkSlide);
+    window.addEventListener('scroll', debounce(checkSlide));
 
   </script>
 
