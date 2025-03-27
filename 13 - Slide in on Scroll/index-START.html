@@ -66,9 +66,9 @@
       //loop over every image and decide where image should be shown
       //when image is peaking and showing 50% of height lets show it
       sliderImages.forEach(sliderImage => {
-        //show current pixel level of where we are, where each image shows at half height of image
+        //shows us where each image shows at half height of image
         const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
-        //shows us how far the top of the image is from the top of the window
+        //shows us how far the top of the image, bottom of image
         const imageBottom = sliderImage.offsetTop + sliderImage.height;
       });
     }
