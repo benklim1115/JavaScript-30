@@ -63,10 +63,11 @@
     const sliderImages = document.querySelector('.slide-in');
 
     function checkSlide(e) {
-      //loop over every image and decide whre image should be shown
+      //loop over every image and decide where image should be shown
       //when image is peaking and showing 50% of height lets show it
       sliderImages.forEach(sliderImage => {
-        const slideInAt;
+        //show current pixel level of where we are
+        const slideInAt = (window.scrollY + window.innerHeight);
       });
     }
 
