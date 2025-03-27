@@ -68,6 +68,8 @@
       sliderImages.forEach(sliderImage => {
         //show current pixel level of where we are, where each image shows at half height of image
         const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+        //shows us how far the top of the image is from the top of the window
+        const imageBottom = sliderImage.offsetTop;
       });
     }
 
