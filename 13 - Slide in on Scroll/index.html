@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link rel="icon" href="https://fav.farm/✅" />
+  <link rel="icon" href="https://fav.farm/🔥" />
 </head>
 <body>
 
@@ -44,6 +44,7 @@
   </div>
 
   <script>
+    // Run checkslide function at most this many seconds with debounce.
     function debounce(func, wait = 20, immediate = true) {
       var timeout;
       return function() {
@@ -57,18 +58,21 @@
         timeout = setTimeout(later, wait);
         if (callNow) func.apply(context, args);
       };
-    };
+    }
 
     const sliderImages = document.querySelectorAll('.slide-in');
 
     function checkSlide() {
+      //loop over every image and decide where image should be shown
+      //when image is peaking and showing 50% of height lets show it
       sliderImages.forEach(sliderImage => {
-        // half way through the image
+        //shows us where each image shows at half height of image
         const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
-        // bottom of the image
+        //shows us how far the top of the image, bottom of image
         const imageBottom = sliderImage.offsetTop + sliderImage.height;
         const isHalfShown = slideInAt > sliderImage.offsetTop;
         const isNotScrolledPast = window.scrollY < imageBottom;
+
         if (isHalfShown && isNotScrolledPast) {
           sliderImage.classList.add('active');
         } else {
