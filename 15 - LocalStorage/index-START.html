@@ -43,6 +43,14 @@
     this.reset();
   }
 
+  function populateList(plates = [], platesList) {
+    platesList.innerHTML = plates.map((plate, index) => {
+      return `
+        
+      `;
+    });
+  }
+
   addItems.addEventListener('submit', addItem);
 
 </script>
