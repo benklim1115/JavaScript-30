@@ -38,6 +38,7 @@
 <script>
   const hero = document.querySelector('.hero');
   const text = hero.querySelector('h1');
+  const walk = 100; //100px
 
   function shadow(e) {
     //need to get the width and height of the hero
@@ -49,6 +50,11 @@
       x = x + e.target.offsetLeft;
       y = y + e.target.offsetTop;
     }
+
+    //if 100 is the max we want to go from -50 start top left to 50 bottom right
+    //goes from -50 to 50 instead of 0 to 100
+    const xWalk = (x / width * walk) - (walk / 2);
+    const yWalk = (y / width * walk) - (walk / 2);
   }
 
   hero.addEventListener('mousemove', shadow);
