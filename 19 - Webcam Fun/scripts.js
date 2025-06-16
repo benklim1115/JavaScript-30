@@ -11,6 +11,10 @@ function getVideo() {
             video.srcObject = localMediaStream;
             video.play();
         })
+        //catch in case someone doesnt allow access to webcam
+        .catch(err => {
+            console.log('An error has occurred', err);
+        });
 }
 
 getVideo();
