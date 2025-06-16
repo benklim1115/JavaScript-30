@@ -5,5 +5,10 @@ const strip = document.querySelector('.strip');
 const snap = document.querySelector('.snap');
 
 function getVideo() {
-    navigator.mediaDevices.getUserMedia({video: true, audio: false});
+    navigator.mediaDevices.getUserMedia({video: true, audio: false})
+        .then(localMediaStream => {
+            console.log(localMediaStream);
+        })
 }
+
+getVideo();
